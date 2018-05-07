@@ -11,6 +11,7 @@ import static org.junit.Assert.assertEquals;
 
 
 public class BibliotecaAppTest {
+    private Book book;
 
     @Test
     public void getListOfBooksTest() {
@@ -23,9 +24,7 @@ public class BibliotecaAppTest {
     }
 
     @Test
-
-    public void readUserInputTest(String message) {
-
-    }
-
+    public void isCheckedOutOrReturnedTest() {
+       
+    };
 }
