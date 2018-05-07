@@ -14,8 +14,9 @@ public class MainMenu {
     private static final String OPTION_INVALID = "Select a valid option!";
     private static final String EXIT = "You are exiting BibliotecaApp";
     private static final String INITIAL_MENU = "Choose an option:\n" +
-            "1 - Books List\n" + "" +
-            "2 - Checkout a Book\n" + "" +
+            "1 - List of Books\n" + "" +
+            "2 - Checkout a book\n" + "" +
+            "3 - Return a book\n" + "" +
             "0 - Quit\n" + "";
 
     public static List <Book> books = List.of(
@@ -41,7 +42,7 @@ public class MainMenu {
 
 
     public static List getListOfBooks() {
-        return books;
+        return books.stream().filter(book -> book.getCheckedOut() == false).collect(Collectors.toList());
     }
 
     public static void checkoutBook() {
@@ -54,21 +55,40 @@ public class MainMenu {
 
         for(int i = 0; i < books.size(); i ++){
             Book book = books.get(i);
-            if(book.getId() == option){
+            if(book.getId() == option && !book.getCheckedOut()){
                 book.setCheckedOut(true);
                 System.out.println("Thank you! Enjoy the book");
+                return;
 
-            } else {
+            } else if(book.getId() != option){
                 System.out.println("That book is not available.");
+                return;
             }
         }
-        updateListOfBooks(books);
 
     }
 
-    public static List updateListOfBooks(List <Book> books) {
-        return books.stream().filter(book -> book.getCheckedOut()).collect(Collectors.toList());
+    public static void returnABook() {
+        List <Book> listOfBooks = getListOfBooks();
+
+        String message = "Choose the id of the book you want to return:\n" + listOfBooks.toString();
+
+        int option = readUserInput(message);
+
+        for(int i = 0; i < books.size(); i ++){
+            Book book = books.get(i);
+            if(book.getId() == option && book.getCheckedOut()){
+                book.setCheckedOut(false);
+                System.out.println("Thank you for returning the book.");
+                return;
+
+            } else if(book.getId() != option){
+                System.out.println("That is not a valid book to return.");
+                return;
+            }
+        }
     }
+
 
     public static void menuOptions(int option) {
         String message = "";
@@ -77,6 +97,9 @@ public class MainMenu {
 
         } else if (option == 2) {
             checkoutBook();
+
+        } else if (option == 3) {
+            returnABook();
 
         } else if (option == 0) {
             message += EXIT;
