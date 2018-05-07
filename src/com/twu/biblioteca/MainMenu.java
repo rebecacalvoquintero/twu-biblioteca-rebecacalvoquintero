@@ -33,7 +33,6 @@ public class MainMenu {
 
         System.out.print(message);
 
-        // get their input as a String
         int chosenOption = Integer.parseInt(scanner.next());
 
         return chosenOption;
