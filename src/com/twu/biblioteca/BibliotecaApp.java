@@ -1,12 +1,14 @@
 package com.twu.biblioteca;
 import com.twu.biblioteca.items.Book;
+import com.twu.biblioteca.MainMenu;
 
 import java.util.List;
+
 
 public class BibliotecaApp {
 
 
-    public static void greeting() {
+    public static void welcomeGreeting() {
         System.out.println("Hello, welcome to Biblioteca!!");
     }
 
@@ -24,8 +26,12 @@ public class BibliotecaApp {
     }
 
     public static void main(String[] args) {
-        greeting();
-        getListOfBooks();
+        // greet user
+        welcomeGreeting();
+
+        // prompt user to choose an option
+        MainMenu.initMenu();
+
 
     }
 }
