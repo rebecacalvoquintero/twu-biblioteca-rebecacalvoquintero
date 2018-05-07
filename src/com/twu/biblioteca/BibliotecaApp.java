@@ -10,7 +10,7 @@ public class BibliotecaApp {
         System.out.println("Hello, welcome to Biblioteca!!");
     }
 
-    public static void getListOfBooks() {
+    public static List getListOfBooks() {
         List <Book> listOfBooks = List.of(
                 new Book("Eloquent Javascript", "Marijn Haverbeke", 2011),
                 new Book("Head First Java", "Kathy  Sierra & Bert Bates", 2003),
@@ -18,6 +18,7 @@ public class BibliotecaApp {
         );
 
         System.out.println(listOfBooks);
+        return listOfBooks;
 
 
     }

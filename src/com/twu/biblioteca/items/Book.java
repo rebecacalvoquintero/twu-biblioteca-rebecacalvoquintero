@@ -17,7 +17,7 @@ public class Book {
         return "Book: Name='" + name + "', Author=" + author + "', Year of Publication=" + yearPublished;
     }
 
-    public String name() {
+    public String getName() {
         return name;
     }
 
