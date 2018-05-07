@@ -16,9 +16,6 @@ public class BibliotecaApp {
 
         // prompt user to choose a main option
         MainMenu.initMenu();
-
-        // if option
-
-
+        s
     }
 }

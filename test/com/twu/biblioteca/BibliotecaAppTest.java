@@ -27,14 +27,5 @@ public class BibliotecaAppTest {
     public void readUserInputTest(String message) {
 
     }
-//    public void menuOptionsTest() {
-//       List <Book> books = List.of(
-//                new Book("Eloquent Javascript", "Marijn Haverbeke", 2011, 10),
-//                new Book("Head First Java", "Kathy  Sierra & Bert Bates", 2003, 11),
-//                new Book("Programming Phoenix", "Chris McCord, Bruce Tate and Jose Valim", 2016, 12)
-//        );
-//
-//       assertEquals(books, new MainMenu().menuOptions(1));
-//
-//    }
+
 }

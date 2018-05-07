@@ -44,26 +44,38 @@ public class MainMenu {
         return books.stream().filter(book -> book.getCheckedOut() == false).collect(Collectors.toList());
     }
 
+    public static void isCheckedOutOrReturned(int option, String successfulMessage, String failMessage) {
+        for(int i = 0; i < books.size(); i ++){
+            Book book = books.get(i);
+            if(book.getId() == option && !book.getCheckedOut()){
+                book.setCheckedOut(true);
+                System.out.println(successfulMessage);
+                return;
+
+            } if(book.getId() == option && book.getCheckedOut()){
+                book.setCheckedOut(false);
+                System.out.println(successfulMessage);
+                return;
+
+            } else if(book.getId() != option){
+                System.out.println(failMessage);
+                return;
+
+            }
+        }
+    }
+
     public static void checkoutBook() {
 
         List <Book> listOfBooks = getListOfBooks();
 
         String message = "Choose the id of the book you want to checkout:\n" + listOfBooks.toString();
+        String successfulMessage = "Thank you! Enjoy the book";
+        String failMessage = "That book is not available.";
 
         int option = readUserInput(message);
 
-        for(int i = 0; i < books.size(); i ++){
-            Book book = books.get(i);
-            if(book.getId() == option && !book.getCheckedOut()){
-                book.setCheckedOut(true);
-                System.out.println("Thank you! Enjoy the book");
-                return;
-
-            } else if(book.getId() != option){
-                System.out.println("That book is not available.");
-                return;
-            }
-        }
+        isCheckedOutOrReturned(option, successfulMessage, failMessage);
 
     }
 
@@ -71,21 +83,12 @@ public class MainMenu {
         List <Book> listOfBooks = getListOfBooks();
 
         String message = "Choose the id of the book you want to return:\n" + listOfBooks.toString();
+        String successfulMessage = "Thank you for returning the book.";
+        String failMessage = "That is not a valid book to return.";
 
         int option = readUserInput(message);
 
-        for(int i = 0; i < books.size(); i ++){
-            Book book = books.get(i);
-            if(book.getId() == option && book.getCheckedOut()){
-                book.setCheckedOut(false);
-                System.out.println("Thank you for returning the book.");
-                return;
-
-            } else if(book.getId() != option){
-                System.out.println("That is not a valid book to return.");
-                return;
-            }
-        }
+        isCheckedOutOrReturned(option, successfulMessage, failMessage);
     }
 
 
@@ -102,6 +105,7 @@ public class MainMenu {
 
         } else if (option == 0) {
             message += EXIT;
+            System.out.println(message);
             System.exit(1);
 
         } else {
