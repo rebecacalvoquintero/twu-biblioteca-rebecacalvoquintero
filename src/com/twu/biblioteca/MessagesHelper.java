@@ -11,6 +11,8 @@ public class MessagesHelper {
             "4 - List of Movies\n" + "" +
             "5 - Checkout a Movie\n" + "" +
             "6 - Return a Movie\n" + "" +
+            "7 - Login\n" +
+            "8 - User information\n" +
             "0 - Quit\n" + "";
 
     public static String checkoutBookMessage = "Choose the id of the book you want to checkout:\n";
@@ -27,4 +29,11 @@ public class MessagesHelper {
     public static String returnMovieMessage = "Choose the id of the movie you want to return:\n";
     public static String returnMovieSuccessfulMessage = "Thank you for returning the movie.";
     public static String returnMovieFailMessage = "That is not a valid movie to return.";
+
+    public static String loginIsNecessary = "Please login to continue";
+    public static String loginSuccessful = "Login Successful";
+    public static String loginFailed = "Sorry, the details are not correct. Please try again";
+
+    public static String LibraryNumber = "Library number: ";
+    public static String Password = "Password: ";
 }

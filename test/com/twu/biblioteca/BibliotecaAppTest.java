@@ -19,7 +19,7 @@ public class BibliotecaAppTest {
     @Test
     public void getListOfBooksTest() {
         List <String> result = List.of("Eloquent Javascript", "Head First Java", "Programming Phoenix");
-        List <Book> listOfBooks = new MainMenu().getListOfBooks();
+        List <Book> listOfBooks = Biblioteca.getListOfBooks();
         List <String> listOfNames = listOfBooks.stream().map(Book -> Book.getName()).collect(Collectors.toList());
         System.out.println("listOfNames");
         System.out.println(listOfNames);

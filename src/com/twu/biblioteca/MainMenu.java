@@ -1,168 +1,90 @@
 package com.twu.biblioteca;
-import com.twu.biblioteca.items.Book;
-import com.twu.biblioteca.items.Movie;
 
 import java.util.Scanner;
-import java.util.List;
-import java.util.stream.Collectors;
-
 
 
 public class MainMenu {
 
-    private static List <Book> books = List.of(
-            new Book("Eloquent Javascript", "Marijn Haverbeke", 2011, 10),
-            new Book("Head First Java", "Kathy  Sierra & Bert Bates", 2003, 11),
-            new Book("Programming Phoenix", "Chris McCord, Bruce Tate and Jose Valim", 2016, 12)
-    );
-
-    private static List <Movie> movies = List.of(
-            new Movie("Grand Hotel Budapest", 2014, "Wes Anderson",  9, 15),
-            new Movie("Match Point", 2005, "Woody Allen", 7, 16),
-            new Movie("Amelie", 2001, "Jean-Pierre Jeunet", 10, 17)
-    );
+    public static User currentUser;
 
 
-    public static int readUserInput(String message)
-    {
+    public static String readUserInput(String message) {
         // create a scanner so we can read the command-line input
         Scanner scanner = new Scanner(System.in);
 
         System.out.print(message);
 
-        int chosenOption = Integer.parseInt(scanner.next());
-
+        String chosenOption = scanner.next();
         return chosenOption;
 
+    };
+
+    public static boolean hasUserLoggedIn() {
+        return currentUser != null && currentUser.isLogged == true;
     }
 
+    public static void userLogin(String message) {
+        System.out.println(message);
+        String libraryNumber = readUserInput(MessagesHelper.LibraryNumber);
+        String password = readUserInput(MessagesHelper.Password);
+        boolean userIsLogged = Biblioteca.login(libraryNumber, password);
 
-    public static List getListOfBooks() {
-        return books.stream().filter(book -> book.getCheckedOut() == false).collect(Collectors.toList());
-    }
-
-    public static List getListOfMovies() {
-        return movies.stream().filter(movie -> movie.getCheckedOut() == false).collect(Collectors.toList());
-    }
-
-
-    public static void checkoutItem(String checkoutMessage, String checkoutSuccessfulMessage, String checkoutFailMessage, List items) {
-
-        int option = readUserInput(checkoutMessage);
-        if (items == books){
-            isBookCheckedOut(option, checkoutSuccessfulMessage, checkoutFailMessage);
-        } else if (items == movies) {
-            isMovieCheckedOut(option, checkoutSuccessfulMessage, checkoutFailMessage);
+        if (userIsLogged) {
+            currentUser = Biblioteca.getUserLogged();
+            message = String.format(MessagesHelper.loginSuccessful, currentUser.getName());
+        } else {
+            message = MessagesHelper.loginFailed;
         }
 
+        System.out.println(message);
     }
 
-    public static void returnItem(String checkoutMessage, String checkoutSuccessfulMessage, String checkoutFailMessage, List items) {
-
-        int option = readUserInput(checkoutMessage);
-        if (items == books){
-            isBookReturned(option, checkoutSuccessfulMessage, checkoutFailMessage);
-        } else if (items == movies) {
-            isMovieReturned(option, checkoutSuccessfulMessage, checkoutFailMessage);
-        }
-
-    }
-
-    public static void isBookCheckedOut(int option, String successfulMessage, String failMessage) {
-        for(int i = 0; i < books.size(); i ++){
-            Book book = books.get(i);
-            System.out.println(book);
-            if(book.getId() == option && !book.getCheckedOut()){
-                book.setCheckedOut(true);
-                System.out.println(successfulMessage);
-                return;
-
-            }  else if(book.getId() != option){
-                System.out.println(failMessage);
-                return;
-
-            }
-        }
-    }
-    public static void isMovieCheckedOut(int option, String successfulMessage, String failMessage) {
-        for(int i = 0; i < movies.size(); i ++){
-            Movie movie = movies.get(i);
-            System.out.println(movie);
-            if(movie.getId() == option && !movie.getCheckedOut()){
-                movie.setCheckedOut(true);
-                System.out.println(successfulMessage);
-                return;
-
-            }  else if(movie.getId() != option){
-                System.out.println(failMessage);
-                return;
-
-            }
-        }
-    }
-
-    public static void isBookReturned(int option, String successfulMessage, String failMessage) {
-        for(int i = 0; i < books.size(); i ++){
-            Book book = books.get(i);
-            System.out.println(book);
-            if(book.getId() == option && book.getCheckedOut()){
-                book.setCheckedOut(false);
-                System.out.println(successfulMessage);
-                return;
-
-            } else if(book.getId() != option){
-                System.out.println(failMessage);
-                return;
-
-            }
-        }
-    }
-    public static void isMovieReturned(int option, String successfulMessage, String failMessage) {
-        for(int i = 0; i < movies.size(); i ++){
-            Movie movie = movies.get(i);
-            if(movie.getId() == option && movie.getCheckedOut()){
-                movie.setCheckedOut(false);
-                System.out.println(successfulMessage);
-                return;
-
-            } else if(movie.getId() != option){
-                System.out.println(failMessage);
-                return;
-            }
-        }
-    }
-
-    public static void menuOptions(int option) {
+    public static void menuOptions(String option) {
         String message = "";
-        if (option == 1 ) {
-            message += getListOfBooks();
+        if (Integer.parseInt(option) == 1) {
+            message += Biblioteca.getListOfBooks();
 
-        } else if (option == 2) {
-            checkoutItem(MessagesHelper.checkoutBookMessage,
-                    MessagesHelper.checkoutBookSuccessfulMessage,
-                    MessagesHelper.checkoutBookFailMessage,
-                    books);
+        } else if (Integer.parseInt(option) == 2) {
+            if (!hasUserLoggedIn()) {
+                userLogin(MessagesHelper.loginIsNecessary);
+            } else {
+                Biblioteca.checkoutItem(MessagesHelper.checkoutBookMessage,
+                        MessagesHelper.checkoutBookSuccessfulMessage,
+                        MessagesHelper.checkoutBookFailMessage,
+                        Biblioteca.books);
+            }
 
-        } else if (option == 3) {
-            returnItem(MessagesHelper.returnBookMessage,
-                    MessagesHelper.returnBookSuccessfulMessage,
-                    MessagesHelper.returnBookFailMessage,
-                    books);
 
-        } else if (option == 4) {
-            message += getListOfMovies();
+        } else if (Integer.parseInt(option) == 3) {
+            if (!hasUserLoggedIn()) {
+                userLogin(MessagesHelper.loginIsNecessary);
+            } else {
+                Biblioteca.returnItem(MessagesHelper.returnBookMessage,
+                        MessagesHelper.returnBookSuccessfulMessage,
+                        MessagesHelper.returnBookFailMessage,
+                        Biblioteca.books);
+            }
 
-        } else if (option == 5) {
-            checkoutItem(MessagesHelper.checkoutMovieMessage,
+        } else if (Integer.parseInt(option) == 4) {
+            message += Biblioteca.getListOfMovies();
+
+        } else if (Integer.parseInt(option) == 5) {
+            Biblioteca.checkoutItem(MessagesHelper.checkoutMovieMessage,
                     MessagesHelper.checkoutMovieSuccessfulMessage,
-                    MessagesHelper.checkoutMovieFailMessage, movies);
+                    MessagesHelper.checkoutMovieFailMessage, Biblioteca.movies);
 
-        } else if (option == 6) {
-            returnItem(MessagesHelper.returnMovieMessage,
+        } else if (Integer.parseInt(option) == 6) {
+            Biblioteca.returnItem(MessagesHelper.returnMovieMessage,
                     MessagesHelper.returnMovieSuccessfulMessage,
-                    MessagesHelper.returnMovieFailMessage, movies);
+                    MessagesHelper.returnMovieFailMessage, Biblioteca.movies);
 
-        } else if (option == 0) {
+        } else if (Integer.parseInt(option) == 7) {
+            userLogin(MessagesHelper.loginIsNecessary);
+
+        } else if (Integer.parseInt(option) == 8) {
+                message += Biblioteca.getUserLoggedDetails();
+
+        } else if (Integer.parseInt(option) == 0) {
             message += MessagesHelper.EXIT;
             System.out.println(message);
             System.exit(1);
@@ -174,7 +96,9 @@ public class MainMenu {
         System.out.println(message);
         initMenu();
 
-    };
+    }
+
+    ;
 
 
     public static void initMenu() {
