@@ -17,7 +17,7 @@ public class Book {
     }
 
     @Override public String toString() {
-        return "Book: { name=:'" + name + "', Author=:'" + author + "', Year of Publication:" + yearPublished + "', Id:" + id + "', checkedOut:" + checkedOut + "}\n";
+        return "Book: { name:'" + name + "', Author:'" + author + "', Year of Publication:" + yearPublished + "', Id:" + id + "', checkedOut:" + checkedOut + "}\n";
     }
 
     public String getName() {
