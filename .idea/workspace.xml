@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a11cf7a9-a657-49a9-b4bf-b5f66d0ef493" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/items/Movie.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/MessagesHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/biblioteca/com/twu/biblioteca/MainMenu.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/biblioteca/com/twu/biblioteca/BibliotecaAppTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/biblioteca/com/twu/biblioteca/BibliotecaAppTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/MainMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/items/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/items/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/BibliotecaAppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/BibliotecaAppTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,11 +37,10 @@
       <file leaf-file-name="MainMenu.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/MainMenu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="123">
-              <caret line="19" column="41" lean-forward="true" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
+            <state relative-caret-position="177">
+              <caret line="202" lean-forward="true" selection-start-line="202" selection-end-line="202" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#readUserInput#0;class#MainMenu#0" />
                 <element signature="method#getListOfBooks#0;class#MainMenu#0" />
                 <element signature="method#getListOfMovies#0;class#MainMenu#0" />
                 <element signature="method#checkoutItem#0;class#MainMenu#0" />
@@ -54,8 +49,16 @@
                 <element signature="method#isMovieCheckedout#0;class#MainMenu#0" />
                 <element signature="method#isBookReturned#0;class#MainMenu#0" />
                 <element signature="method#isMovieReturned#0;class#MainMenu#0" />
-                <element signature="method#initMenu#0;class#MainMenu#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MessagesHelper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/MessagesHelper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="267">
+              <caret line="18" column="28" lean-forward="true" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -90,6 +93,7 @@
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/items/movie.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/items/Movie.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/items/Book.java" />
+        <option value="$PROJECT_DIR$/src/com/twu/biblioteca/MessagesHelper.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/MainMenu.java" />
       </list>
     </option>
@@ -386,12 +390,12 @@
       <window_info anchor="right" id="Capture Analysis" order="0" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.12847683" side_tool="true" weight="0.31673583" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info active="true" anchor="bottom" id="Run" order="5" sideWeight="0.8715232" visible="true" weight="0.31673583" />
+      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.8715232" visible="true" weight="0.31673583" />
       <window_info anchor="bottom" id="Version Control" order="2" />
       <window_info anchor="bottom" id="Terminal" order="0" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="0" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.23774834" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.23774834" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
       <window_info id="UI Designer" order="1" />
@@ -462,8 +466,20 @@
           <properties />
           <option name="timeStamp" value="7" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/twu/biblioteca/MainMenu.java</url>
+          <line>112</line>
+          <properties />
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/twu/biblioteca/MainMenu.java</url>
+          <line>205</line>
+          <properties />
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="12" />
+      <option name="time" value="14" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -568,13 +584,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/MessagesHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="18" column="28" lean-forward="true" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/MainMenu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="19" column="41" lean-forward="true" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
+        <state relative-caret-position="177">
+          <caret line="202" lean-forward="true" selection-start-line="202" selection-end-line="202" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#readUserInput#0;class#MainMenu#0" />
             <element signature="method#getListOfBooks#0;class#MainMenu#0" />
             <element signature="method#getListOfMovies#0;class#MainMenu#0" />
             <element signature="method#checkoutItem#0;class#MainMenu#0" />
@@ -583,7 +605,6 @@
             <element signature="method#isMovieCheckedout#0;class#MainMenu#0" />
             <element signature="method#isBookReturned#0;class#MainMenu#0" />
             <element signature="method#isMovieReturned#0;class#MainMenu#0" />
-            <element signature="method#initMenu#0;class#MainMenu#0" />
           </folding>
         </state>
       </provider>
