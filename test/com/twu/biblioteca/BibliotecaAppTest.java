@@ -4,7 +4,10 @@ import com.twu.biblioteca.MainMenu;
 import com.twu.biblioteca.items.Book;
 
 import java.util.List;
+import java.io.InputStream;
+import java.io.ByteArrayInputStream;
 import java.util.stream.Collectors;
+
 
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
@@ -22,15 +25,5 @@ public class BibliotecaAppTest {
         System.out.println(listOfNames);
         assertEquals(result, listOfNames);
     }
-
-    @Test
-    public void MenuOption1Test() {
-        book = new Book("The Alchemist", "Paolo Coello", 1985, 285);
-
-    };
-
-    @Test
-    public void isCheckedOutOrReturnedTest() {
-
-    };
+    
 }
