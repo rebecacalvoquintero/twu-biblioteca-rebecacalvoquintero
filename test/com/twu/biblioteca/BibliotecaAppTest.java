@@ -24,7 +24,13 @@ public class BibliotecaAppTest {
     }
 
     @Test
+    public void MenuOption1Test() {
+        book = new Book("The Alchemist", "Paolo Coello", 1985, 285);
+
+    };
+
+    @Test
     public void isCheckedOutOrReturnedTest() {
-       
+
     };
 }

@@ -114,7 +114,8 @@ public class MainMenu {
 
         System.out.println(message);
         initMenu();
-    }
+
+    };
 
 
     public static void initMenu() {
