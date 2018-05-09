@@ -1,6 +1,7 @@
 package com.twu.biblioteca;
 
 import java.util.Scanner;
+import java.util.List;
 
 
 public class MainMenu {
@@ -38,6 +39,7 @@ public class MainMenu {
 
         System.out.println(message);
     }
+
 
     public static void menuOptions(String option) {
         String message = "";
@@ -98,7 +100,6 @@ public class MainMenu {
 
     }
 
-    ;
 
 
     public static void initMenu() {

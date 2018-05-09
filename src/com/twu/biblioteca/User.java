@@ -23,23 +23,8 @@ public class User {
             return name;
         }
 
-        public String getEmail() {
-            return email;
-        }
-
-        public String getPhone() {
-            return phone;
-        }
-        public String getLibraryNumber() {
-            return libraryNumber;
-        }
-
-        public String getPassword() {
-            return password;
-        }
-
-        public boolean checkCredentials (String libraryNumber, String password) {
-            return libraryNumber.equals(libraryNumber) && password.equals(password);
+        public boolean checkCredentials ( String userLibraryNumber, String userPassword) {
+            return (libraryNumber.equals(userLibraryNumber) && password.equals(userPassword));
         }
 
         public String getUserDetails(){

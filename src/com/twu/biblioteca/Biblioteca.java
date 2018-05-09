@@ -127,10 +127,9 @@ public class Biblioteca {
     }
 
     public static boolean login(String libraryNumber, String password) {
-        int position = findUsersByLibraryNumberAndPassword(libraryNumber, password);
-        if (position != - 1) {
-            users.get(position).isLogged = true;
-            userLogged = users.get(position);
+        User isUserFound = findUsersByLibraryNumberAndPassword(libraryNumber, password);
+        userLogged = isUserFound;
+        if (isUserFound != null) {
             return true;
         }
         return false;
@@ -144,19 +143,15 @@ public class Biblioteca {
         return userLogged.getUserDetails();
     }
 
-    public static int findUsersByLibraryNumberAndPassword(String libraryNumber, String password){
-        int i = 0;
-        int position = -1;
-
-        for (User user : users ){
-            if(user.checkCredentials(libraryNumber, password)){
-                position = i;
-                break;
-            }
-            i++;
+    public static User findUsersByLibraryNumberAndPassword(String userLibraryNumber, String userPassword){
+        List <User> usersFound = users.stream()
+                .filter(u -> u.checkCredentials(userLibraryNumber, userPassword))
+                .collect(Collectors.toList());
+        if(usersFound.size() > 0){
+            return usersFound.get(0);
         }
-        return position;
-    }
+        return null;
+    };
 
 }
 
