@@ -1,11 +1,7 @@
 package com.twu.biblioteca;
-import com.twu.biblioteca.BibliotecaApp;
-import com.twu.biblioteca.MainMenu;
 import com.twu.biblioteca.items.Book;
 
 import java.util.List;
-import java.io.InputStream;
-import java.io.ByteArrayInputStream;
 import java.util.stream.Collectors;
 
 
@@ -14,7 +10,14 @@ import static org.junit.Assert.assertEquals;
 
 
 public class BibliotecaAppTest {
-    private Book book;
+
+    @Test
+    public void welcomeGreetingTest() {
+        String result = "Hello, welcome to Biblioteca!!";
+        assertEquals(result, BibliotecaApp.welcomeGreeting());
+
+    }
+
 
     @Test
     public void getListOfBooksTest() {
