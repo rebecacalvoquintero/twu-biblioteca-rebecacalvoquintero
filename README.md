@@ -4,7 +4,7 @@ A library management system where as a User I would like to see the following:
 
 - [x] The Welcome Message: "Welcome to Biblioteca!!" when I start the application, so that I feel welcome and know that Biblioteca is available.
 - [x] After the welcome message appears I would like to see a list of all library books, so that I can browse for books I might want to check-out. Assume that there is a pre-existing list of books. You don't need to support adding or removing books from the library.
-- [x] A list of all books to include each books Author and Year Published, so that I can be confident that I have found the book I am looking for.
+- [x] A list of all books to include each books Author and Year Published, so that I can be confident that I have found the book I am looking for. 
 - [x] Main Menu  - As a customer, instead of automatically seeing the book list, I would like to see a list of options and be able to choose one. For now, the only option should be 'List Books'. All future options should be added to this menu also.
 - [x] Invalid Menu Option - As a customer, I would like to be notified when I choose an invalid option with the message “Select a valid option!”, so that I can know when I need to re-enter my choice.
 - [x] Quit - As a customer, I would like to continue choosing options until I choose to 'Quit'.
@@ -19,11 +19,11 @@ A library management system where as a User I would like to see the following:
 - [x] User Accounts - Login - As a librarian, I want to know who has checked out a book, so that I can hold them accountable for returning it. Users must now login using their library number (which is in the format xxx-xxxx) and a password in order to check-out and return books. User credentials are predefined, so registering new users is not part of this story.
 - [x] I want to be able to see my user information (name, email address and phone number), so that I know that the library can contact me. This option should only be available when the customer is logged in and should only display that customer’s information.
 
-## How?
+##How?
 
 Biblioteca, is an application written in java, using a TDD approach.
 
-## Installation instructions
+##Installation instructions
 
 - Clone the respo
 ``` git clone https://github.com/rebecacalvoquintero/twu-biblioteca-rebecacalvoquintero.git```
@@ -40,7 +40,7 @@ Biblioteca, is an application written in java, using a TDD approach.
 
 - Startenjoying the bibliotecaApp!
 
-## Running tests
+##Running tests
 
 - Go to the test directory and right click it.
 - Select the option 'Run all tests'
@@ -49,5 +49,6 @@ Biblioteca, is an application written in java, using a TDD approach.
 
 
 ![](https://i.imgur.com/6cgsvN2.png)
+
 
 
