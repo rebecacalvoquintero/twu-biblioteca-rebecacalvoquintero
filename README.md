@@ -19,11 +19,11 @@ A library management system where as a User I would like to see the following:
 - [x] User Accounts - Login - As a librarian, I want to know who has checked out a book, so that I can hold them accountable for returning it. Users must now login using their library number (which is in the format xxx-xxxx) and a password in order to check-out and return books. User credentials are predefined, so registering new users is not part of this story.
 - [x] I want to be able to see my user information (name, email address and phone number), so that I know that the library can contact me. This option should only be available when the customer is logged in and should only display that customer’s information.
 
-##How?
+## How?
 
 Biblioteca, is an application written in java, using a TDD approach.
 
-##Installation instructions
+## Installation instructions
 
 - Clone the respo
 ``` git clone https://github.com/rebecacalvoquintero/twu-biblioteca-rebecacalvoquintero.git```
@@ -40,7 +40,7 @@ Biblioteca, is an application written in java, using a TDD approach.
 
 - Startenjoying the bibliotecaApp!
 
-##Running tests
+## Running tests
 
 - Go to the test directory and right click it.
 - Select the option 'Run all tests'
