@@ -1,7 +1,6 @@
 package com.twu.biblioteca;
 
 import java.util.Scanner;
-import java.util.List;
 
 
 public class MainMenu {
