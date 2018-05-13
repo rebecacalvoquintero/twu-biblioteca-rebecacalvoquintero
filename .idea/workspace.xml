@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a11cf7a9-a657-49a9-b4bf-b5f66d0ef493" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/MainMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/BibliotecaAppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/BibliotecaAppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,10 +14,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="README" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
+            <state relative-caret-position="592">
               <caret line="45" selection-start-line="45" selection-end-line="46" />
             </state>
           </provider>
@@ -83,7 +81,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BibliotecaAppTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BibliotecaAppTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/BibliotecaAppTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="343">
@@ -403,12 +401,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BibliotecaAppTest_getUserDetailsTest - 2018.05.13 at 10h 48m 50s.xml">
-      <configuration name="BibliotecaAppTest.getUserDetailsTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BibliotecaAppTest_getUserDetailsTest - 2018.05.13 at 10h 49m 04s.xml">
-      <configuration name="BibliotecaAppTest.getUserDetailsTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="BibliotecaAppTest_getUserDetailsTest - 2018.05.13 at 10h 51m 31s.xml">
       <configuration name="BibliotecaAppTest.getUserDetailsTest" configurationId="JUnit" />
     </history-entry>
@@ -433,6 +425,12 @@
     <history-entry file="BibliotecaAppTest_getUserDetailsTest - 2018.05.13 at 14h 48m 21s.xml">
       <configuration name="BibliotecaAppTest.getUserDetailsTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="BibliotecaAppTest_getUserDetailsTest - 2018.05.13 at 14h 48m 40s.xml">
+      <configuration name="BibliotecaAppTest.getUserDetailsTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_biblioteca - 2018.05.13 at 14h 48m 48s.xml">
+      <configuration name="All in biblioteca" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1510" height="797" extended-state="0" />
@@ -446,12 +444,12 @@
       <window_info anchor="right" id="Capture Analysis" order="0" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.12847683" side_tool="true" weight="0.31673583" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info active="true" anchor="bottom" id="Run" order="5" sideWeight="0.8715232" visible="true" weight="0.31673583" />
+      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.8715232" visible="true" weight="0.31673583" />
       <window_info anchor="bottom" id="Version Control" order="2" />
       <window_info anchor="bottom" id="Terminal" order="0" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="0" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.23774834" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.23774834" />
       <window_info anchor="bottom" id="Find" order="4" weight="0.32918397" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
@@ -598,12 +596,18 @@
           <properties />
           <option name="timeStamp" value="28" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/test/com/twu/biblioteca/BibliotecaAppTest.java</url>
+          <line>58</line>
+          <properties />
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="29" />
+      <option name="time" value="30" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/README">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="95" lean-forward="true" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="95" />
@@ -676,13 +680,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="45" selection-start-line="45" selection-end-line="46" />
         </state>
       </provider>
     </entry>
@@ -778,6 +775,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="592">
+          <caret line="45" selection-start-line="45" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>
@@ -795,7 +799,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited />
+          <last-edited>No facets are configured</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
